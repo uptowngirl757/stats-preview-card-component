@@ -37,7 +37,7 @@ body {
   @include flexDefault;
 
   &__img {
-    // display: block;
+    display: block;
     max-inline-size: 100%;
     height: auto;
     border-radius: 10px 10px 0 0;
@@ -45,8 +45,8 @@ body {
     &-wrapper {
       position: relative;
       display: inline-block;
-      height: 100%;
-      //   width: 100%;
+      // height: 100%;
+      // overflow: hidden;
 
       &::after {
         content: "";
@@ -56,12 +56,11 @@ body {
         bottom: 0;
         left: 0;
         pointer-events: none;
-        overflow: hidden;
-
         background: linear-gradient(
-          hsla(244, 38%, 16%, 0.3),
-          hsla(244, 38%, 16%, 0.3) //   hsla(277, 64%, 61%, 0.2),
-          //   hsla(277, 64%, 61%, 0.2)
+          //   hsla(244, 38%, 16%, .7),
+          //   hsla(244, 38%, 16%, .7)
+          hsla(277, 64%, 61%, 0.5),
+          hsla(277, 64%, 61%, 0.5)
         );
       }
     }
@@ -114,18 +113,15 @@ body {
     max-width: 800px;
     gap: 3rem;
     &__img {
-      //   height: 100%;
-      //   width: 400px;
-      object-fit: cover;
+      height: 100%;
       border-radius: 0 10px 10px 0;
     }
     &__content {
       margin-inline-start: 1.6rem;
+      padding: 0;
     }
     &__heading {
       margin-block: 1.2rem;
-    }
-    &__description {
     }
 
     &__stats {
